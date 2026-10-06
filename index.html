@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Que Bandeira É?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="wrap">
+  <header>
+    <h1>Que Bandeira <span>É?</span></h1>
+    <button class="mute" id="mute" type="button" aria-pressed="false">🔊 Som ligado</button>
+  </header>
+
+  <div class="score" aria-live="polite">
+    <div><b id="sHits">0</b><small>Acertos</small></div>
+    <div><b id="sStreak">0</b><small>Sequência</small></div>
+    <div><b id="sAcc">–</b><small>De primeira</small></div>
+  </div>
+
+  <section class="stage">
+    <span class="round" id="round"></span>
+    <div class="flag" id="flagBox"><img id="flag" alt="Bandeira de um país"></div>
+    <p class="question">De qual país é esta bandeira?</p>
+  </section>
+
+  <div class="answers" id="answers"></div>
+  <p class="feedback" id="feedback" role="status"></p>
+  <p class="hint">Errou? A opção fica bloqueada e você tenta de novo até acertar.</p>
+</div>
+
+<script src="js/countries.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
